@@ -1,0 +1,29 @@
+{
+  "name": "simple-passport-login",
+  "version": "1.0.0",
+  "description": "\"# Simple-passport-login\"",
+  "main": "index.js",
+  "scripts": {
+    "startDev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f-jooste/Simple-passport-login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/f-jooste/Simple-passport-login/issues"
+  },
+  "homepage": "https://github.com/f-jooste/Simple-passport-login#readme",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.2",
+    "nodemon": "^3.1.14"
+  }
+}
