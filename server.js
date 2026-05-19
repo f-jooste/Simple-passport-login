@@ -8,6 +8,7 @@ const bcrypt = require('bcrypt');
 const flash = require('express-flash');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('mehotd-override')
 
 
 const initilizePassport = require('./passport-config');
@@ -29,6 +30,7 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'))
 
 app.get('/', checkAuthenticated, (req, res) => {
     res.render('index.ejs', {name: req.user.name})
@@ -63,6 +65,11 @@ app.post('/register', checkNotAuthenticated, async(req, res) => {
     }
 
     console.log(users);
+})
+
+app.delete('/logout', (req, res)  => {
+    req.logOut()
+    req.redirect('/login')
 })
 
 function checkAuthenticated(req, res, next) {
