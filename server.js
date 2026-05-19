@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 const flash = require('express-flash');
 const session = require('express-session');
 const passport = require('passport');
-const methodOverride = require('mehotd-override')
+const methodOverride = require('method-override')
 
 
 const initilizePassport = require('./passport-config');
